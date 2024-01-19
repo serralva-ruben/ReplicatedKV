@@ -1,0 +1,145 @@
+2024-01-19T18:10:03.131_278+01:00 [d487] [====] Start logger: ./srv3.log (32 MB per file, up to 10 files)	[logger.cc:982, start()]
+2024-01-19T18:10:03.133_649+01:00 [d487] [INFO] Raft ASIO listener initiated, UNSECURED	[asio_service.cxx:883, asio_rpc_listener()]
+2024-01-19T18:10:03.133_700+01:00 [d487] [INFO] parameters: timeout 200 - 400, heartbeat 100, leadership expiry 2000, max batch 100, backoff 50, snapshot distance 5, enable randomized snapshot creation NO, log sync stop gap 99999, reserved logs 5, client timeout 3000, auto forwarding OFF, API call type BLOCKING, custom commit quorum size 0, custom election quorum size 0, snapshot receiver INCLUDED, leadership transfer wait time 0, grace period of lagging state machine 0, snapshot IO: BLOCKING, parallel log appending: OFF	[raft_server.cxx:422, apply_and_log_current_params()]
+2024-01-19T18:10:03.133_711+01:00 [d487] [INFO] new timeout range: 200 -- 400	[raft_server.cxx:347, update_rand_timeout()]
+2024-01-19T18:10:03.133_730+01:00 [d487] [INFO]    === INIT RAFT SERVER ===
+commit index 0
+term 0
+election timer allowed
+log store start 1, end 0
+config log idx 0, prev log idx 0	[raft_server.cxx:167, raft_server()]
+2024-01-19T18:10:03.133_738+01:00 [d487] [INFO] peer 3: DC ID 0, localhost:1003, voting member, 1
+my id: 3, voting_member
+num peers: 0	[raft_server.cxx:258, raft_server()]
+2024-01-19T18:10:03.133_745+01:00 [d487] [INFO] global manager does not exist. will use local thread for commit and append	[raft_server.cxx:277, start_server()]
+2024-01-19T18:10:03.133_793+01:00 [d487] [INFO] wait for HB, for 50 + [200, 400] ms	[raft_server.cxx:304, start_server()]
+2024-01-19T18:10:03.133_851+01:00 [3f80] [INFO] bg append_entries thread initiated	[handle_append_entries.cxx:104, append_entries_in_bg()]
+2024-01-19T18:10:03.566_921+01:00 [d060] [WARN] Election timeout, initiate leader election	[handle_timeout.cxx:287, handle_election_timeout()]
+2024-01-19T18:10:03.566_932+01:00 [d060] [INFO] [PRIORITY] decay, target 1 -> 1, mine 1	[handle_priority.cxx:223, decay_target_priority()]
+2024-01-19T18:10:03.566_937+01:00 [d060] [INFO] [ELECTION TIMEOUT] current role: follower, log last term 0, state term 0, target p 1, my p 1, hb dead, pre-vote NOT done	[handle_timeout.cxx:305, handle_election_timeout()]
+2024-01-19T18:10:03.566_946+01:00 [d060] [INFO] [VOTE INIT] my id 3, my role candidate, term 1, log idx 0, log term 0, priority (target 1 / mine 1)	[handle_vote.cxx:245, request_vote()]
+2024-01-19T18:10:03.566_948+01:00 [d060] [INFO] number of pending commit elements: 0	[raft_server.cxx:992, become_leader()]
+2024-01-19T18:10:03.566_950+01:00 [d060] [INFO] state machine commit index 0, precommit index 0, last log index 0	[raft_server.cxx:1008, become_leader()]
+2024-01-19T18:10:03.566_956+01:00 [d060] [INFO] [BECOME LEADER] appended new config at 1	[raft_server.cxx:1049, become_leader()]
+2024-01-19T18:10:03.566_970+01:00 [487b] [INFO] config at index 1 is committed, prev config log idx 0	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T18:10:03.566_972+01:00 [487b] [INFO] new config log idx 1, prev log idx 0, cur config log idx 0, prev log idx 0	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T18:10:03.566_979+01:00 [487b] [INFO] new configuration: log idx 1, prev log idx 0
+peer 3, DC ID 0, localhost:1003, voting member, 1
+my id: 3, leader: 3, term: 1	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T18:12:08.974_096+01:00 [d487] [====] Start logger: ./srv3.log (32 MB per file, up to 10 files)	[logger.cc:982, start()]
+2024-01-19T18:12:08.976_338+01:00 [d487] [INFO] Raft ASIO listener initiated, UNSECURED	[asio_service.cxx:883, asio_rpc_listener()]
+2024-01-19T18:12:08.976_359+01:00 [d487] [INFO] parameters: timeout 200 - 400, heartbeat 100, leadership expiry 2000, max batch 100, backoff 50, snapshot distance 5, enable randomized snapshot creation NO, log sync stop gap 99999, reserved logs 5, client timeout 3000, auto forwarding OFF, API call type BLOCKING, custom commit quorum size 0, custom election quorum size 0, snapshot receiver INCLUDED, leadership transfer wait time 0, grace period of lagging state machine 0, snapshot IO: BLOCKING, parallel log appending: OFF	[raft_server.cxx:422, apply_and_log_current_params()]
+2024-01-19T18:12:08.976_369+01:00 [d487] [INFO] new timeout range: 200 -- 400	[raft_server.cxx:347, update_rand_timeout()]
+2024-01-19T18:12:08.976_381+01:00 [d487] [INFO]    === INIT RAFT SERVER ===
+commit index 0
+term 0
+election timer allowed
+log store start 1, end 0
+config log idx 0, prev log idx 0	[raft_server.cxx:167, raft_server()]
+2024-01-19T18:12:08.976_388+01:00 [d487] [INFO] peer 3: DC ID 0, localhost:1003, voting member, 1
+my id: 3, voting_member
+num peers: 0	[raft_server.cxx:258, raft_server()]
+2024-01-19T18:12:08.976_391+01:00 [d487] [INFO] global manager does not exist. will use local thread for commit and append	[raft_server.cxx:277, start_server()]
+2024-01-19T18:12:08.976_450+01:00 [d487] [INFO] wait for HB, for 50 + [200, 400] ms	[raft_server.cxx:304, start_server()]
+2024-01-19T18:12:08.976_500+01:00 [efa0] [INFO] bg append_entries thread initiated	[handle_append_entries.cxx:104, append_entries_in_bg()]
+2024-01-19T18:12:09.332_042+01:00 [85ff] [WARN] Election timeout, initiate leader election	[handle_timeout.cxx:287, handle_election_timeout()]
+2024-01-19T18:12:09.332_064+01:00 [85ff] [INFO] [PRIORITY] decay, target 1 -> 1, mine 1	[handle_priority.cxx:223, decay_target_priority()]
+2024-01-19T18:12:09.332_079+01:00 [85ff] [INFO] [ELECTION TIMEOUT] current role: follower, log last term 0, state term 0, target p 1, my p 1, hb dead, pre-vote NOT done	[handle_timeout.cxx:305, handle_election_timeout()]
+2024-01-19T18:12:09.332_097+01:00 [85ff] [INFO] [VOTE INIT] my id 3, my role candidate, term 1, log idx 0, log term 0, priority (target 1 / mine 1)	[handle_vote.cxx:245, request_vote()]
+2024-01-19T18:12:09.332_103+01:00 [85ff] [INFO] number of pending commit elements: 0	[raft_server.cxx:992, become_leader()]
+2024-01-19T18:12:09.332_107+01:00 [85ff] [INFO] state machine commit index 0, precommit index 0, last log index 0	[raft_server.cxx:1008, become_leader()]
+2024-01-19T18:12:09.332_128+01:00 [85ff] [INFO] [BECOME LEADER] appended new config at 1	[raft_server.cxx:1049, become_leader()]
+2024-01-19T18:12:09.332_164+01:00 [2d82] [INFO] config at index 1 is committed, prev config log idx 0	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T18:12:09.332_170+01:00 [2d82] [INFO] new config log idx 1, prev log idx 0, cur config log idx 0, prev log idx 0	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T18:12:09.332_188+01:00 [2d82] [INFO] new configuration: log idx 1, prev log idx 0
+peer 3, DC ID 0, localhost:1003, voting member, 1
+my id: 3, leader: 3, term: 1	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T18:12:35.714_537+01:00 [e788] [INFO] receive a incoming rpc connection	[asio_service.cxx:948, handle_accept()]
+2024-01-19T18:12:35.714_555+01:00 [e788] [INFO] session 1 got connection from 127.0.0.1:62186 (as a server)	[asio_service.cxx:271, prepare_handshake()]
+2024-01-19T18:12:35.714_645+01:00 [281a] [INFO] got join cluster req from leader 1	[handle_join_leave.cxx:170, handle_join_cluster_req()]
+2024-01-19T18:12:35.714_660+01:00 [281a] [INFO] new config log idx 2, prev log idx 1, cur config log idx 1, prev log idx 0	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T18:12:35.714_721+01:00 [281a] [INFO] server 1 is added to cluster	[handle_commit.cxx:750, reconfigure()]
+2024-01-19T18:12:35.714_747+01:00 [281a] [INFO] server 2 is added to cluster	[handle_commit.cxx:750, reconfigure()]
+2024-01-19T18:12:35.714_750+01:00 [281a] [INFO] peer 3 cannot be found, no action for removing	[handle_commit.cxx:844, reconfigure()]
+2024-01-19T18:12:35.714_754+01:00 [281a] [INFO] add peer 1, localhost:1001, voting member
+add peer 2, localhost:1002, voting member	[handle_commit.cxx:849, reconfigure()]
+2024-01-19T18:12:35.714_762+01:00 [281a] [INFO] new configuration: log idx 2, prev log idx 1
+peer 1, DC ID 0, localhost:1001, voting member, 1
+peer 2, DC ID 0, localhost:1002, voting member, 1
+my id: 3, leader: 1, term: 1	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T18:12:35.715_269+01:00 [c49d] [ERRO] session 1 failed to read rpc header from socket 127.0.0.1:62186 due to error 2, End of file, ref count 1	[asio_service.cxx:342, operator()()]
+2024-01-19T18:12:35.820_197+01:00 [85ff] [INFO] receive a incoming rpc connection	[asio_service.cxx:948, handle_accept()]
+2024-01-19T18:12:35.820_230+01:00 [85ff] [INFO] session 2 got connection from 127.0.0.1:62188 (as a server)	[asio_service.cxx:271, prepare_handshake()]
+2024-01-19T18:12:35.820_300+01:00 [e788] [INFO] [LOG XX] req log idx: 3, req log term: 1, my last log idx: 1, my log (3) term: 0	[handle_append_entries.cxx:648, handle_append_entries()]
+2024-01-19T18:12:35.820_310+01:00 [e788] [INFO] deny, req term 1, my term 1, req log idx 3, my log idx 1	[handle_append_entries.cxx:656, handle_append_entries()]
+2024-01-19T18:12:35.820_571+01:00 [85ff] [INFO] receive a config change from leader at 2	[handle_append_entries.cxx:827, handle_append_entries()]
+2024-01-19T18:12:35.820_579+01:00 [85ff] [INFO] receive a config change from leader at 3	[handle_append_entries.cxx:827, handle_append_entries()]
+2024-01-19T18:12:35.820_634+01:00 [2d82] [INFO] config at index 1 is committed, prev config log idx 2	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T18:12:35.820_641+01:00 [2d82] [INFO] skipped config 1, latest config 2	[handle_commit.cxx:419, commit_conf()]
+2024-01-19T18:12:35.820_650+01:00 [2d82] [INFO] config at index 2 is committed, prev config log idx 2	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T18:12:35.820_655+01:00 [2d82] [INFO] skipped config 2, latest config 2	[handle_commit.cxx:419, commit_conf()]
+2024-01-19T18:12:35.820_662+01:00 [2d82] [INFO] config at index 3 is committed, prev config log idx 2	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T18:12:35.820_675+01:00 [2d82] [INFO] new config log idx 3, prev log idx 2, cur config log idx 2, prev log idx 1	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T18:12:35.820_685+01:00 [2d82] [INFO] now this node is the part of cluster, catch-up process is done, clearing the flag	[handle_commit.cxx:710, reconfigure()]
+2024-01-19T18:12:35.820_731+01:00 [2d82] [INFO] new configuration: log idx 3, prev log idx 2
+peer 1, DC ID 0, localhost:1001, voting member, 1
+peer 2, DC ID 0, localhost:1002, voting member, 1
+peer 3, DC ID 0, localhost:1003, voting member, 1
+my id: 3, leader: 1, term: 1	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T18:12:56.103_668+01:00 [2d82] [INFO] creating a snapshot for index 5	[handle_commit.cxx:530, snapshot_and_compact()]
+2024-01-19T18:12:56.103_707+01:00 [2d82] [INFO] create snapshot idx 5 log_term 1	[handle_commit.cxx:590, snapshot_and_compact()]
+2024-01-19T18:12:56.103_721+01:00 [2d82] [INFO] snapshot idx 5 log_term 1 created, compact the log store if needed	[handle_commit.cxx:639, on_snapshot_completed()]
+2024-01-19T18:12:56.103_741+01:00 [2d82] [INFO] create snapshot idx 5 log_term 1 done: 29 us elapsed	[handle_commit.cxx:602, snapshot_and_compact()]
+2024-01-19T18:13:19.945_085+01:00 [85ff] [ERRO] session 2 failed to read rpc header from socket 127.0.0.1:62188 due to error 2, End of file, ref count 1	[asio_service.cxx:342, operator()()]
+2024-01-19T18:13:20.127_432+01:00 [e788] [INFO] receive a incoming rpc connection	[asio_service.cxx:948, handle_accept()]
+2024-01-19T18:13:20.127_439+01:00 [e788] [INFO] session 3 got connection from 127.0.0.1:62193 (as a server)	[asio_service.cxx:271, prepare_handshake()]
+2024-01-19T18:13:20.127_502+01:00 [c49d] [INFO] [PRE-VOTE REQ] my role follower, from peer 2, log term: req 1 / mine 1
+last idx: req 6 / mine 6, term: req 1 / mine 1
+HB alive	[handle_vote.cxx:425, handle_prevote_req()]
+2024-01-19T18:13:20.127_504+01:00 [c49d] [INFO] pre-vote decision: X (deny)	[handle_vote.cxx:448, handle_prevote_req()]
+2024-01-19T18:13:20.178_843+01:00 [281a] [WARN] Election timeout, initiate leader election	[handle_timeout.cxx:287, handle_election_timeout()]
+2024-01-19T18:13:20.178_853+01:00 [281a] [INFO] [ELECTION TIMEOUT] current role: follower, log last term 1, state term 1, target p 1, my p 1, hb alive, pre-vote NOT done	[handle_timeout.cxx:305, handle_election_timeout()]
+2024-01-19T18:13:20.178_855+01:00 [281a] [INFO] reset RPC client for peer 2	[handle_vote.cxx:79, request_prevote()]
+2024-01-19T18:13:20.178_895+01:00 [281a] [INFO] reset RPC client for peer 1	[handle_vote.cxx:79, request_prevote()]
+2024-01-19T18:13:20.178_912+01:00 [281a] [INFO] [PRE-VOTE INIT] my id 3, my role candidate, term 1, log idx 6, log term 1, priority (target 1 / mine 1)	[handle_vote.cxx:149, request_prevote()]
+2024-01-19T18:13:20.181_984+01:00 [85ff] [INFO] 0x10e804d48 connected to localhost:1002 (as a client)	[asio_service.cxx:1473, connected()]
+2024-01-19T18:13:20.182_109+01:00 [281a] [INFO] [PRE-VOTE RESP] peer 2 (O), term 1, resp term 1, my role candidate, dead 2, live 0, abandoned 0, num voting members 3, quorum 2	[handle_vote.cxx:491, handle_prevote_resp()]
+2024-01-19T18:13:20.182_111+01:00 [281a] [INFO] [PRE-VOTE DONE] SUCCESS, term 1	[handle_vote.cxx:494, handle_prevote_resp()]
+2024-01-19T18:13:20.182_112+01:00 [281a] [INFO] [PRE-VOTE DONE] initiate actual vote	[handle_vote.cxx:499, handle_prevote_resp()]
+2024-01-19T18:13:20.182_115+01:00 [281a] [INFO] [VOTE INIT] my id 3, my role candidate, term 2, log idx 6, log term 1, priority (target 1 / mine 1)	[handle_vote.cxx:245, request_vote()]
+2024-01-19T18:13:20.182_125+01:00 [281a] [WARN] failed to send vote request: peer 1 (localhost:1001) is busy	[handle_vote.cxx:287, request_vote()]
+2024-01-19T18:13:20.182_256+01:00 [e788] [INFO] [VOTE RESP] peer 2 (O), resp term 2, my role candidate, granted 2, responded 2, num voting members 3, quorum 2	[handle_vote.cxx:397, handle_vote_resp()]
+2024-01-19T18:13:20.182_258+01:00 [e788] [INFO] Server is elected as leader for term 2	[handle_vote.cxx:400, handle_vote_resp()]
+2024-01-19T18:13:20.182_261+01:00 [e788] [INFO] number of pending commit elements: 0	[raft_server.cxx:992, become_leader()]
+2024-01-19T18:13:20.182_262+01:00 [e788] [INFO] state machine commit index 6, precommit index 6, last log index 6	[raft_server.cxx:1008, become_leader()]
+2024-01-19T18:13:20.182_272+01:00 [e788] [INFO] [BECOME LEADER] appended new config at 7	[raft_server.cxx:1049, become_leader()]
+2024-01-19T18:13:20.182_286+01:00 [e788] [WARN] skipped sending msg to 1 too long time, last msg sent 44467 ms ago	[handle_append_entries.cxx:364, request_append_entries()]
+2024-01-19T18:13:20.182_287+01:00 [e788] [INFO]   === LEADER (term 2) ===	[handle_vote.cxx:403, handle_vote_resp()]
+2024-01-19T18:13:20.182_401+01:00 [85ff] [WARN] skipped sending msg to 1 too long time, last msg sent 44467 ms ago	[handle_append_entries.cxx:364, request_append_entries()]
+2024-01-19T18:13:20.182_414+01:00 [2d82] [INFO] config at index 7 is committed, prev config log idx 3	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T18:13:20.182_418+01:00 [2d82] [INFO] new config log idx 7, prev log idx 3, cur config log idx 3, prev log idx 2	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T18:13:20.182_427+01:00 [2d82] [INFO] new configuration: log idx 7, prev log idx 3
+peer 1, DC ID 0, localhost:1001, voting member, 1
+peer 2, DC ID 0, localhost:1002, voting member, 1
+peer 3, DC ID 0, localhost:1003, voting member, 1
+my id: 3, leader: 3, term: 2	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T18:13:20.182_581+01:00 [c49d] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:20.284_662+01:00 [281a] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:20.435_834+01:00 [281a] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:20.588_231+01:00 [c49d] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:20.737_568+01:00 [c49d] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:20.888_336+01:00 [281a] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:21.038_845+01:00 [281a] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:21.189_868+01:00 [c49d] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:21.342_273+01:00 [e788] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:21.494_876+01:00 [281a] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:21.642_939+01:00 [e788] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:21.795_196+01:00 [e788] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:21.945_368+01:00 [c49d] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:22.096_917+01:00 [281a] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:22.247_640+01:00 [e788] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:22.399_226+01:00 [e788] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:22.570_476+01:00 [281a] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:22.702_031+01:00 [c49d] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:22.856_234+01:00 [e788] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
+2024-01-19T18:13:23.004_663+01:00 [c49d] [WARN] too verbose RPC error on peer (1), will suppress it from now	[raft_server.cxx:804, handle_peer_resp()]
