@@ -58,7 +58,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/RAFT_CORE_OBJ.dir/DependInfo.cmake"
   "CMakeFiles/static_lib.dir/DependInfo.cmake"
   "CMakeFiles/shared_lib.dir/DependInfo.cmake"
-  "examples/CMakeFiles/calc_server.dir/DependInfo.cmake"
+  "examples/CMakeFiles/map_server.dir/DependInfo.cmake"
   "examples/CMakeFiles/echo_server.dir/DependInfo.cmake"
   "examples/CMakeFiles/quick_start.dir/DependInfo.cmake"
   "tests/CMakeFiles/raft_server_test.dir/DependInfo.cmake"

@@ -1,12 +1,12 @@
 
 # === Example replicated calculator ===
-add_executable(calc_server
-               calculator/calc_server.cxx
+add_executable(map_server
+               map/map_server.cxx
                logger.cc
                in_memory_log_store.cxx)
-add_dependencies(calc_server
+add_dependencies(map_server
                  static_lib)
-target_link_libraries(calc_server
+target_link_libraries(map_server
                       ${BUILD_DIR}/${LIBRARY_OUTPUT_NAME}
                       ${LIBRARIES})
 

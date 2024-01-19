@@ -143,3 +143,67 @@ my id: 3, leader: 3, term: 2	[handle_commit.cxx:894, reconfigure()]
 2024-01-19T18:13:22.702_031+01:00 [c49d] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
 2024-01-19T18:13:22.856_234+01:00 [e788] [WARN] peer (1) response error: failed to connect to peer 1, localhost:1001, error 61, Connection refused	[raft_server.cxx:801, handle_peer_resp()]
 2024-01-19T18:13:23.004_663+01:00 [c49d] [WARN] too verbose RPC error on peer (1), will suppress it from now	[raft_server.cxx:804, handle_peer_resp()]
+2024-01-19T21:13:03.746_835+01:00 [d487] [====] Start logger: ./srv3.log (32 MB per file, up to 10 files)	[logger.cc:982, start()]
+2024-01-19T21:13:03.749_045+01:00 [d487] [INFO] Raft ASIO listener initiated, UNSECURED	[asio_service.cxx:883, asio_rpc_listener()]
+2024-01-19T21:13:03.749_065+01:00 [d487] [INFO] parameters: timeout 200 - 400, heartbeat 100, leadership expiry 2000, max batch 100, backoff 50, snapshot distance 5, enable randomized snapshot creation NO, log sync stop gap 99999, reserved logs 5, client timeout 3000, auto forwarding OFF, API call type BLOCKING, custom commit quorum size 0, custom election quorum size 0, snapshot receiver INCLUDED, leadership transfer wait time 0, grace period of lagging state machine 0, snapshot IO: BLOCKING, parallel log appending: OFF	[raft_server.cxx:422, apply_and_log_current_params()]
+2024-01-19T21:13:03.749_074+01:00 [d487] [INFO] new timeout range: 200 -- 400	[raft_server.cxx:347, update_rand_timeout()]
+2024-01-19T21:13:03.749_089+01:00 [d487] [INFO]    === INIT RAFT SERVER ===
+commit index 0
+term 0
+election timer allowed
+log store start 1, end 0
+config log idx 0, prev log idx 0	[raft_server.cxx:167, raft_server()]
+2024-01-19T21:13:03.749_096+01:00 [d487] [INFO] peer 3: DC ID 0, localhost:1003, voting member, 1
+my id: 3, voting_member
+num peers: 0	[raft_server.cxx:258, raft_server()]
+2024-01-19T21:13:03.749_100+01:00 [d487] [INFO] global manager does not exist. will use local thread for commit and append	[raft_server.cxx:277, start_server()]
+2024-01-19T21:13:03.749_139+01:00 [d487] [INFO] wait for HB, for 50 + [200, 400] ms	[raft_server.cxx:304, start_server()]
+2024-01-19T21:13:03.749_187+01:00 [66f3] [INFO] bg append_entries thread initiated	[handle_append_entries.cxx:104, append_entries_in_bg()]
+2024-01-19T21:13:04.129_243+01:00 [2f77] [WARN] Election timeout, initiate leader election	[handle_timeout.cxx:287, handle_election_timeout()]
+2024-01-19T21:13:04.129_254+01:00 [2f77] [INFO] [PRIORITY] decay, target 1 -> 1, mine 1	[handle_priority.cxx:223, decay_target_priority()]
+2024-01-19T21:13:04.129_259+01:00 [2f77] [INFO] [ELECTION TIMEOUT] current role: follower, log last term 0, state term 0, target p 1, my p 1, hb dead, pre-vote NOT done	[handle_timeout.cxx:305, handle_election_timeout()]
+2024-01-19T21:13:04.129_266+01:00 [2f77] [INFO] [VOTE INIT] my id 3, my role candidate, term 1, log idx 0, log term 0, priority (target 1 / mine 1)	[handle_vote.cxx:245, request_vote()]
+2024-01-19T21:13:04.129_269+01:00 [2f77] [INFO] number of pending commit elements: 0	[raft_server.cxx:992, become_leader()]
+2024-01-19T21:13:04.129_271+01:00 [2f77] [INFO] state machine commit index 0, precommit index 0, last log index 0	[raft_server.cxx:1008, become_leader()]
+2024-01-19T21:13:04.129_278+01:00 [2f77] [INFO] [BECOME LEADER] appended new config at 1	[raft_server.cxx:1049, become_leader()]
+2024-01-19T21:13:04.129_315+01:00 [8993] [INFO] config at index 1 is committed, prev config log idx 0	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T21:13:04.129_317+01:00 [8993] [INFO] new config log idx 1, prev log idx 0, cur config log idx 0, prev log idx 0	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T21:13:04.129_325+01:00 [8993] [INFO] new configuration: log idx 1, prev log idx 0
+peer 3, DC ID 0, localhost:1003, voting member, 1
+my id: 3, leader: 3, term: 1	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T21:30:06.148_841+01:00 [dceb] [INFO] receive a incoming rpc connection	[asio_service.cxx:948, handle_accept()]
+2024-01-19T21:30:06.148_884+01:00 [dceb] [INFO] session 1 got connection from 127.0.0.1:63668 (as a server)	[asio_service.cxx:271, prepare_handshake()]
+2024-01-19T21:30:06.148_972+01:00 [c7ad] [INFO] got join cluster req from leader 1	[handle_join_leave.cxx:170, handle_join_cluster_req()]
+2024-01-19T21:30:06.148_987+01:00 [c7ad] [INFO] new config log idx 6, prev log idx 1, cur config log idx 1, prev log idx 0	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T21:30:06.149_057+01:00 [c7ad] [INFO] server 1 is added to cluster	[handle_commit.cxx:750, reconfigure()]
+2024-01-19T21:30:06.149_087+01:00 [c7ad] [INFO] server 2 is added to cluster	[handle_commit.cxx:750, reconfigure()]
+2024-01-19T21:30:06.149_090+01:00 [c7ad] [INFO] peer 3 cannot be found, no action for removing	[handle_commit.cxx:844, reconfigure()]
+2024-01-19T21:30:06.149_093+01:00 [c7ad] [INFO] add peer 1, localhost:1001, voting member
+add peer 2, localhost:1002, voting member	[handle_commit.cxx:849, reconfigure()]
+2024-01-19T21:30:06.149_100+01:00 [c7ad] [INFO] new configuration: log idx 6, prev log idx 1
+peer 1, DC ID 0, localhost:1001, voting member, 1
+peer 2, DC ID 0, localhost:1002, voting member, 1
+my id: 3, leader: 1, term: 1	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T21:30:06.149_544+01:00 [c44f] [ERRO] session 1 failed to read rpc header from socket 127.0.0.1:63668 due to error 2, End of file, ref count 1	[asio_service.cxx:342, operator()()]
+2024-01-19T21:30:06.253_545+01:00 [2f77] [INFO] receive a incoming rpc connection	[asio_service.cxx:948, handle_accept()]
+2024-01-19T21:30:06.253_559+01:00 [2f77] [INFO] session 2 got connection from 127.0.0.1:63670 (as a server)	[asio_service.cxx:271, prepare_handshake()]
+2024-01-19T21:30:06.253_594+01:00 [dceb] [INFO] [LOG XX] req log idx: 7, req log term: 1, my last log idx: 1, my log (7) term: 0	[handle_append_entries.cxx:648, handle_append_entries()]
+2024-01-19T21:30:06.253_600+01:00 [dceb] [INFO] deny, req term 1, my term 1, req log idx 7, my log idx 1	[handle_append_entries.cxx:656, handle_append_entries()]
+2024-01-19T21:30:06.253_782+01:00 [2f77] [INFO] receive a config change from leader at 6	[handle_append_entries.cxx:827, handle_append_entries()]
+2024-01-19T21:30:06.253_786+01:00 [2f77] [INFO] receive a config change from leader at 7	[handle_append_entries.cxx:827, handle_append_entries()]
+2024-01-19T21:30:06.253_823+01:00 [8993] [INFO] config at index 1 is committed, prev config log idx 6	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T21:30:06.253_827+01:00 [8993] [INFO] skipped config 1, latest config 6	[handle_commit.cxx:419, commit_conf()]
+2024-01-19T21:30:06.253_839+01:00 [8993] [INFO] creating a snapshot for index 5	[handle_commit.cxx:530, snapshot_and_compact()]
+2024-01-19T21:30:06.253_844+01:00 [8993] [INFO] create snapshot idx 5 log_term 1	[handle_commit.cxx:590, snapshot_and_compact()]
+2024-01-19T21:30:06.253_853+01:00 [8993] [INFO] snapshot idx 5 log_term 1 created, compact the log store if needed	[handle_commit.cxx:639, on_snapshot_completed()]
+2024-01-19T21:30:06.253_888+01:00 [8993] [INFO] create snapshot idx 5 log_term 1 done: 41 us elapsed	[handle_commit.cxx:602, snapshot_and_compact()]
+2024-01-19T21:30:06.253_895+01:00 [8993] [INFO] config at index 6 is committed, prev config log idx 6	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T21:30:06.253_898+01:00 [8993] [INFO] skipped config 6, latest config 6	[handle_commit.cxx:419, commit_conf()]
+2024-01-19T21:30:06.253_902+01:00 [8993] [INFO] config at index 7 is committed, prev config log idx 6	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T21:30:06.253_909+01:00 [8993] [INFO] new config log idx 7, prev log idx 6, cur config log idx 6, prev log idx 1	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T21:30:06.253_913+01:00 [8993] [INFO] now this node is the part of cluster, catch-up process is done, clearing the flag	[handle_commit.cxx:710, reconfigure()]
+2024-01-19T21:30:06.253_930+01:00 [8993] [INFO] new configuration: log idx 7, prev log idx 6
+peer 1, DC ID 0, localhost:1001, voting member, 1
+peer 2, DC ID 0, localhost:1002, voting member, 1
+peer 3, DC ID 0, localhost:1003, voting member, 1
+my id: 3, leader: 1, term: 1	[handle_commit.cxx:894, reconfigure()]

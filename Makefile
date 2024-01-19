@@ -214,17 +214,17 @@ shared_lib/fast:
 .PHONY : shared_lib/fast
 
 #=============================================================================
-# Target rules for targets named calc_server
+# Target rules for targets named map_server
 
 # Build rule for target.
-calc_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calc_server
-.PHONY : calc_server
+map_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 map_server
+.PHONY : map_server
 
 # fast build rule for target.
-calc_server/fast:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/build
-.PHONY : calc_server/fast
+map_server/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/build
+.PHONY : map_server/fast
 
 #=============================================================================
 # Target rules for targets named echo_server
@@ -1009,9 +1009,9 @@ help:
 	@echo "... RAFT_CORE_OBJ"
 	@echo "... asio_service_test"
 	@echo "... buffer_test"
-	@echo "... calc_server"
 	@echo "... echo_server"
 	@echo "... failure_test"
+	@echo "... map_server"
 	@echo "... quick_start"
 	@echo "... raft_bench"
 	@echo "... raft_server_test"

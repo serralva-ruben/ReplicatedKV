@@ -2386,3 +2386,96 @@ my id: 1, leader: 1, term: 1	[handle_commit.cxx:894, reconfigure()]
 2024-01-19T18:12:56.103_552+01:00 [7d19] [INFO] create snapshot idx 5 log_term 1	[handle_commit.cxx:590, snapshot_and_compact()]
 2024-01-19T18:12:56.103_571+01:00 [7d19] [INFO] snapshot idx 5 log_term 1 created, compact the log store if needed	[handle_commit.cxx:639, on_snapshot_completed()]
 2024-01-19T18:12:56.103_651+01:00 [7d19] [INFO] create snapshot idx 5 log_term 1 done: 91 us elapsed	[handle_commit.cxx:602, snapshot_and_compact()]
+2024-01-19T21:04:26.009_955+01:00 [d487] [====] Start logger: ./srv1.log (32 MB per file, up to 10 files)	[logger.cc:982, start()]
+2024-01-19T21:04:26.015_361+01:00 [d487] [INFO] Raft ASIO listener initiated, UNSECURED	[asio_service.cxx:883, asio_rpc_listener()]
+2024-01-19T21:04:26.015_432+01:00 [d487] [INFO] parameters: timeout 200 - 400, heartbeat 100, leadership expiry 2000, max batch 100, backoff 50, snapshot distance 5, enable randomized snapshot creation NO, log sync stop gap 99999, reserved logs 5, client timeout 3000, auto forwarding OFF, API call type BLOCKING, custom commit quorum size 0, custom election quorum size 0, snapshot receiver INCLUDED, leadership transfer wait time 0, grace period of lagging state machine 0, snapshot IO: BLOCKING, parallel log appending: OFF	[raft_server.cxx:422, apply_and_log_current_params()]
+2024-01-19T21:04:26.015_481+01:00 [d487] [INFO] new timeout range: 200 -- 400	[raft_server.cxx:347, update_rand_timeout()]
+2024-01-19T21:04:26.015_495+01:00 [d487] [INFO]    === INIT RAFT SERVER ===
+commit index 0
+term 0
+election timer allowed
+log store start 1, end 0
+config log idx 0, prev log idx 0	[raft_server.cxx:167, raft_server()]
+2024-01-19T21:04:26.015_501+01:00 [d487] [INFO] peer 1: DC ID 0, localhost:1001, voting member, 1
+my id: 1, voting_member
+num peers: 0	[raft_server.cxx:258, raft_server()]
+2024-01-19T21:04:26.015_503+01:00 [d487] [INFO] global manager does not exist. will use local thread for commit and append	[raft_server.cxx:277, start_server()]
+2024-01-19T21:04:26.015_535+01:00 [d487] [INFO] wait for HB, for 50 + [200, 400] ms	[raft_server.cxx:304, start_server()]
+2024-01-19T21:04:26.015_579+01:00 [1b1a] [INFO] bg append_entries thread initiated	[handle_append_entries.cxx:104, append_entries_in_bg()]
+2024-01-19T21:04:26.309_884+01:00 [ab4c] [WARN] Election timeout, initiate leader election	[handle_timeout.cxx:287, handle_election_timeout()]
+2024-01-19T21:04:26.309_961+01:00 [ab4c] [INFO] [PRIORITY] decay, target 1 -> 1, mine 1	[handle_priority.cxx:223, decay_target_priority()]
+2024-01-19T21:04:26.309_990+01:00 [ab4c] [INFO] [ELECTION TIMEOUT] current role: follower, log last term 0, state term 0, target p 1, my p 1, hb dead, pre-vote NOT done	[handle_timeout.cxx:305, handle_election_timeout()]
+2024-01-19T21:04:26.310_059+01:00 [ab4c] [INFO] [VOTE INIT] my id 1, my role candidate, term 1, log idx 0, log term 0, priority (target 1 / mine 1)	[handle_vote.cxx:245, request_vote()]
+2024-01-19T21:04:26.310_077+01:00 [ab4c] [INFO] number of pending commit elements: 0	[raft_server.cxx:992, become_leader()]
+2024-01-19T21:04:26.310_085+01:00 [ab4c] [INFO] state machine commit index 0, precommit index 0, last log index 0	[raft_server.cxx:1008, become_leader()]
+2024-01-19T21:04:26.310_189+01:00 [ab4c] [INFO] [BECOME LEADER] appended new config at 1	[raft_server.cxx:1049, become_leader()]
+2024-01-19T21:04:26.310_330+01:00 [d008] [INFO] config at index 1 is committed, prev config log idx 0	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T21:04:26.310_348+01:00 [d008] [INFO] new config log idx 1, prev log idx 0, cur config log idx 0, prev log idx 0	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T21:04:26.310_387+01:00 [d008] [INFO] new configuration: log idx 1, prev log idx 0
+peer 1, DC ID 0, localhost:1001, voting member, 1
+my id: 1, leader: 1, term: 1	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T21:12:20.422_922+01:00 [d487] [====] Start logger: ./srv1.log (32 MB per file, up to 10 files)	[logger.cc:982, start()]
+2024-01-19T21:12:20.427_087+01:00 [d487] [INFO] Raft ASIO listener initiated, UNSECURED	[asio_service.cxx:883, asio_rpc_listener()]
+2024-01-19T21:12:20.427_126+01:00 [d487] [INFO] parameters: timeout 200 - 400, heartbeat 100, leadership expiry 2000, max batch 100, backoff 50, snapshot distance 5, enable randomized snapshot creation NO, log sync stop gap 99999, reserved logs 5, client timeout 3000, auto forwarding OFF, API call type BLOCKING, custom commit quorum size 0, custom election quorum size 0, snapshot receiver INCLUDED, leadership transfer wait time 0, grace period of lagging state machine 0, snapshot IO: BLOCKING, parallel log appending: OFF	[raft_server.cxx:422, apply_and_log_current_params()]
+2024-01-19T21:12:20.427_158+01:00 [d487] [INFO] new timeout range: 200 -- 400	[raft_server.cxx:347, update_rand_timeout()]
+2024-01-19T21:12:20.427_169+01:00 [d487] [INFO]    === INIT RAFT SERVER ===
+commit index 0
+term 0
+election timer allowed
+log store start 1, end 0
+config log idx 0, prev log idx 0	[raft_server.cxx:167, raft_server()]
+2024-01-19T21:12:20.427_174+01:00 [d487] [INFO] peer 1: DC ID 0, localhost:1001, voting member, 1
+my id: 1, voting_member
+num peers: 0	[raft_server.cxx:258, raft_server()]
+2024-01-19T21:12:20.427_176+01:00 [d487] [INFO] global manager does not exist. will use local thread for commit and append	[raft_server.cxx:277, start_server()]
+2024-01-19T21:12:20.427_198+01:00 [d487] [INFO] wait for HB, for 50 + [200, 400] ms	[raft_server.cxx:304, start_server()]
+2024-01-19T21:12:20.427_263+01:00 [6054] [INFO] bg append_entries thread initiated	[handle_append_entries.cxx:104, append_entries_in_bg()]
+2024-01-19T21:12:20.874_901+01:00 [f21a] [WARN] Election timeout, initiate leader election	[handle_timeout.cxx:287, handle_election_timeout()]
+2024-01-19T21:12:20.874_918+01:00 [f21a] [INFO] [PRIORITY] decay, target 1 -> 1, mine 1	[handle_priority.cxx:223, decay_target_priority()]
+2024-01-19T21:12:20.874_923+01:00 [f21a] [INFO] [ELECTION TIMEOUT] current role: follower, log last term 0, state term 0, target p 1, my p 1, hb dead, pre-vote NOT done	[handle_timeout.cxx:305, handle_election_timeout()]
+2024-01-19T21:12:20.874_940+01:00 [f21a] [INFO] [VOTE INIT] my id 1, my role candidate, term 1, log idx 0, log term 0, priority (target 1 / mine 1)	[handle_vote.cxx:245, request_vote()]
+2024-01-19T21:12:20.874_946+01:00 [f21a] [INFO] number of pending commit elements: 0	[raft_server.cxx:992, become_leader()]
+2024-01-19T21:12:20.874_947+01:00 [f21a] [INFO] state machine commit index 0, precommit index 0, last log index 0	[raft_server.cxx:1008, become_leader()]
+2024-01-19T21:12:20.874_964+01:00 [f21a] [INFO] [BECOME LEADER] appended new config at 1	[raft_server.cxx:1049, become_leader()]
+2024-01-19T21:12:20.874_991+01:00 [6da0] [INFO] config at index 1 is committed, prev config log idx 0	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T21:12:20.874_994+01:00 [6da0] [INFO] new config log idx 1, prev log idx 0, cur config log idx 0, prev log idx 0	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T21:12:20.875_000+01:00 [6da0] [INFO] new configuration: log idx 1, prev log idx 0
+peer 1, DC ID 0, localhost:1001, voting member, 1
+my id: 1, leader: 1, term: 1	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T21:29:48.305_352+01:00 [6da0] [INFO] creating a snapshot for index 5	[handle_commit.cxx:530, snapshot_and_compact()]
+2024-01-19T21:29:48.305_386+01:00 [6da0] [INFO] create snapshot idx 5 log_term 1	[handle_commit.cxx:590, snapshot_and_compact()]
+2024-01-19T21:29:48.305_404+01:00 [6da0] [INFO] snapshot idx 5 log_term 1 created, compact the log store if needed	[handle_commit.cxx:639, on_snapshot_completed()]
+2024-01-19T21:29:48.305_534+01:00 [6da0] [INFO] create snapshot idx 5 log_term 1 done: 142 us elapsed	[handle_commit.cxx:602, snapshot_and_compact()]
+2024-01-19T21:30:01.077_254+01:00 [d487] [INFO] sent join request to peer 2, localhost:1002	[handle_join_leave.cxx:139, invite_srv_to_join_cluster()]
+2024-01-19T21:30:01.086_587+01:00 [9838] [INFO] 0x127f04a38 connected to localhost:1002 (as a client)	[asio_service.cxx:1473, connected()]
+2024-01-19T21:30:01.087_086+01:00 [f21a] [INFO] new server (2) confirms it will join, start syncing logs to it	[handle_join_leave.cxx:208, handle_join_cluster_resp()]
+2024-01-19T21:30:01.087_093+01:00 [f21a] [INFO] [SYNC LOG] LogSync is done for server 2 with log gap 4 (5 - 1, limit 99999), now put the server into cluster	[handle_join_leave.cxx:235, sync_log_to_new_srv()]
+2024-01-19T21:30:01.087_128+01:00 [6da0] [INFO] config at index 6 is committed, prev config log idx 1	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T21:30:01.087_137+01:00 [6da0] [INFO] new config log idx 6, prev log idx 1, cur config log idx 1, prev log idx 0	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T21:30:01.087_172+01:00 [6da0] [INFO] server 2 is added to cluster	[handle_commit.cxx:750, reconfigure()]
+2024-01-19T21:30:01.087_175+01:00 [6da0] [INFO] enable heartbeating for server 2	[handle_commit.cxx:754, reconfigure()]
+2024-01-19T21:30:01.087_249+01:00 [6da0] [INFO] add peer 2, localhost:1002, voting member	[handle_commit.cxx:849, reconfigure()]
+2024-01-19T21:30:01.087_254+01:00 [6da0] [INFO] clearing uncommitted config at log 6, prev 1	[handle_commit.cxx:859, reconfigure()]
+2024-01-19T21:30:01.087_262+01:00 [6da0] [INFO] new configuration: log idx 6, prev log idx 1
+peer 1, DC ID 0, localhost:1001, voting member, 1
+peer 2, DC ID 0, localhost:1002, voting member, 1
+my id: 1, leader: 1, term: 1	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T21:30:01.191_866+01:00 [f21a] [INFO] 0x137e1e578 connected to localhost:1002 (as a client)	[asio_service.cxx:1473, connected()]
+2024-01-19T21:30:01.192_112+01:00 [0ee7] [INFO] declined append: peer 2, prev next log idx 7, resp next 2, new next log idx 2	[handle_append_entries.cxx:1064, handle_append_entries_resp()]
+2024-01-19T21:30:06.140_044+01:00 [d487] [INFO] sent join request to peer 3, localhost:1003	[handle_join_leave.cxx:139, invite_srv_to_join_cluster()]
+2024-01-19T21:30:06.148_746+01:00 [9838] [INFO] 0x130a046f8 connected to localhost:1003 (as a client)	[asio_service.cxx:1473, connected()]
+2024-01-19T21:30:06.149_178+01:00 [d04c] [INFO] new server (3) confirms it will join, start syncing logs to it	[handle_join_leave.cxx:208, handle_join_cluster_resp()]
+2024-01-19T21:30:06.149_182+01:00 [d04c] [INFO] [SYNC LOG] LogSync is done for server 3 with log gap 5 (6 - 1, limit 99999), now put the server into cluster	[handle_join_leave.cxx:235, sync_log_to_new_srv()]
+2024-01-19T21:30:06.149_420+01:00 [6da0] [INFO] config at index 7 is committed, prev config log idx 6	[handle_commit.cxx:410, commit_conf()]
+2024-01-19T21:30:06.149_428+01:00 [6da0] [INFO] new config log idx 7, prev log idx 6, cur config log idx 6, prev log idx 1	[handle_commit.cxx:678, reconfigure()]
+2024-01-19T21:30:06.149_466+01:00 [6da0] [INFO] server 3 is added to cluster	[handle_commit.cxx:750, reconfigure()]
+2024-01-19T21:30:06.149_468+01:00 [6da0] [INFO] enable heartbeating for server 3	[handle_commit.cxx:754, reconfigure()]
+2024-01-19T21:30:06.149_497+01:00 [6da0] [INFO] add peer 3, localhost:1003, voting member	[handle_commit.cxx:849, reconfigure()]
+2024-01-19T21:30:06.149_501+01:00 [6da0] [INFO] clearing uncommitted config at log 7, prev 6	[handle_commit.cxx:859, reconfigure()]
+2024-01-19T21:30:06.149_513+01:00 [6da0] [INFO] new configuration: log idx 7, prev log idx 6
+peer 1, DC ID 0, localhost:1001, voting member, 1
+peer 2, DC ID 0, localhost:1002, voting member, 1
+peer 3, DC ID 0, localhost:1003, voting member, 1
+my id: 1, leader: 1, term: 1	[handle_commit.cxx:894, reconfigure()]
+2024-01-19T21:30:06.253_439+01:00 [9838] [INFO] 0x127e0f198 connected to localhost:1003 (as a client)	[asio_service.cxx:1473, connected()]
+2024-01-19T21:30:06.253_679+01:00 [0ee7] [INFO] declined append: peer 3, prev next log idx 8, resp next 2, new next log idx 2	[handle_append_entries.cxx:1064, handle_append_entries_resp()]

@@ -162,18 +162,18 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/calc_server.dir/rule:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/calc_server.dir/rule
-.PHONY : examples/CMakeFiles/calc_server.dir/rule
+examples/CMakeFiles/map_server.dir/rule:
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/map_server.dir/rule
+.PHONY : examples/CMakeFiles/map_server.dir/rule
 
 # Convenience name for target.
-calc_server: examples/CMakeFiles/calc_server.dir/rule
-.PHONY : calc_server
+map_server: examples/CMakeFiles/map_server.dir/rule
+.PHONY : map_server
 
 # fast build rule for target.
-calc_server/fast:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/build
-.PHONY : calc_server/fast
+map_server/fast:
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/build
+.PHONY : map_server/fast
 
 # Convenience name for target.
 examples/CMakeFiles/echo_server.dir/rule:
@@ -202,30 +202,6 @@ quick_start: examples/CMakeFiles/quick_start.dir/rule
 quick_start/fast:
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/quick_start.dir/build.make examples/CMakeFiles/quick_start.dir/build
 .PHONY : quick_start/fast
-
-calculator/calc_server.o: calculator/calc_server.cxx.o
-.PHONY : calculator/calc_server.o
-
-# target to build an object file
-calculator/calc_server.cxx.o:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/calculator/calc_server.cxx.o
-.PHONY : calculator/calc_server.cxx.o
-
-calculator/calc_server.i: calculator/calc_server.cxx.i
-.PHONY : calculator/calc_server.i
-
-# target to preprocess a source file
-calculator/calc_server.cxx.i:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/calculator/calc_server.cxx.i
-.PHONY : calculator/calc_server.cxx.i
-
-calculator/calc_server.s: calculator/calc_server.cxx.s
-.PHONY : calculator/calc_server.s
-
-# target to generate assembly for a file
-calculator/calc_server.cxx.s:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/calculator/calc_server.cxx.s
-.PHONY : calculator/calc_server.cxx.s
 
 echo/echo_server.o: echo/echo_server.cxx.o
 .PHONY : echo/echo_server.o
@@ -256,7 +232,7 @@ in_memory_log_store.o: in_memory_log_store.cxx.o
 
 # target to build an object file
 in_memory_log_store.cxx.o:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/in_memory_log_store.cxx.o
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/in_memory_log_store.cxx.o
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/echo_server.dir/build.make examples/CMakeFiles/echo_server.dir/in_memory_log_store.cxx.o
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/quick_start.dir/build.make examples/CMakeFiles/quick_start.dir/in_memory_log_store.cxx.o
 .PHONY : in_memory_log_store.cxx.o
@@ -266,7 +242,7 @@ in_memory_log_store.i: in_memory_log_store.cxx.i
 
 # target to preprocess a source file
 in_memory_log_store.cxx.i:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/in_memory_log_store.cxx.i
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/in_memory_log_store.cxx.i
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/echo_server.dir/build.make examples/CMakeFiles/echo_server.dir/in_memory_log_store.cxx.i
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/quick_start.dir/build.make examples/CMakeFiles/quick_start.dir/in_memory_log_store.cxx.i
 .PHONY : in_memory_log_store.cxx.i
@@ -276,7 +252,7 @@ in_memory_log_store.s: in_memory_log_store.cxx.s
 
 # target to generate assembly for a file
 in_memory_log_store.cxx.s:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/in_memory_log_store.cxx.s
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/in_memory_log_store.cxx.s
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/echo_server.dir/build.make examples/CMakeFiles/echo_server.dir/in_memory_log_store.cxx.s
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/quick_start.dir/build.make examples/CMakeFiles/quick_start.dir/in_memory_log_store.cxx.s
 .PHONY : in_memory_log_store.cxx.s
@@ -286,7 +262,7 @@ logger.o: logger.cc.o
 
 # target to build an object file
 logger.cc.o:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/logger.cc.o
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/logger.cc.o
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/echo_server.dir/build.make examples/CMakeFiles/echo_server.dir/logger.cc.o
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/quick_start.dir/build.make examples/CMakeFiles/quick_start.dir/logger.cc.o
 .PHONY : logger.cc.o
@@ -296,7 +272,7 @@ logger.i: logger.cc.i
 
 # target to preprocess a source file
 logger.cc.i:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/logger.cc.i
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/logger.cc.i
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/echo_server.dir/build.make examples/CMakeFiles/echo_server.dir/logger.cc.i
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/quick_start.dir/build.make examples/CMakeFiles/quick_start.dir/logger.cc.i
 .PHONY : logger.cc.i
@@ -306,10 +282,34 @@ logger.s: logger.cc.s
 
 # target to generate assembly for a file
 logger.cc.s:
-	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/calc_server.dir/build.make examples/CMakeFiles/calc_server.dir/logger.cc.s
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/logger.cc.s
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/echo_server.dir/build.make examples/CMakeFiles/echo_server.dir/logger.cc.s
 	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/quick_start.dir/build.make examples/CMakeFiles/quick_start.dir/logger.cc.s
 .PHONY : logger.cc.s
+
+map/map_server.o: map/map_server.cxx.o
+.PHONY : map/map_server.o
+
+# target to build an object file
+map/map_server.cxx.o:
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/map/map_server.cxx.o
+.PHONY : map/map_server.cxx.o
+
+map/map_server.i: map/map_server.cxx.i
+.PHONY : map/map_server.i
+
+# target to preprocess a source file
+map/map_server.cxx.i:
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/map/map_server.cxx.i
+.PHONY : map/map_server.cxx.i
+
+map/map_server.s: map/map_server.cxx.s
+.PHONY : map/map_server.s
+
+# target to generate assembly for a file
+map/map_server.cxx.s:
+	cd "/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject" && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/map_server.dir/build.make examples/CMakeFiles/map_server.dir/map/map_server.cxx.s
+.PHONY : map/map_server.cxx.s
 
 quick_start.o: quick_start.cxx.o
 .PHONY : quick_start.o
@@ -347,12 +347,9 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... calc_server"
 	@echo "... echo_server"
+	@echo "... map_server"
 	@echo "... quick_start"
-	@echo "... calculator/calc_server.o"
-	@echo "... calculator/calc_server.i"
-	@echo "... calculator/calc_server.s"
 	@echo "... echo/echo_server.o"
 	@echo "... echo/echo_server.i"
 	@echo "... echo/echo_server.s"
@@ -362,6 +359,9 @@ help:
 	@echo "... logger.o"
 	@echo "... logger.i"
 	@echo "... logger.s"
+	@echo "... map/map_server.o"
+	@echo "... map/map_server.i"
+	@echo "... map/map_server.s"
 	@echo "... quick_start.o"
 	@echo "... quick_start.i"
 	@echo "... quick_start.s"

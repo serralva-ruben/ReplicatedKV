@@ -8,7 +8,7 @@
 /Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject/CMakeFiles/install.dir
 /Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject/CMakeFiles/install/local.dir
 /Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject/CMakeFiles/install/strip.dir
-/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject/examples/CMakeFiles/calc_server.dir
+/Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject/examples/CMakeFiles/map_server.dir
 /Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject/examples/CMakeFiles/echo_server.dir
 /Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject/examples/CMakeFiles/quick_start.dir
 /Users/rubenserralva/Library/Mobile Documents/com~apple~CloudDocs/uni/sem 5/Parallel and Distributed Systems/KeyValueProject/examples/CMakeFiles/edit_cache.dir
