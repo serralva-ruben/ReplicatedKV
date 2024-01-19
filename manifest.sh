@@ -1,1 +1,0 @@
-ASIO_RELEASE="asio-1-24-0"
